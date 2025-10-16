@@ -5,7 +5,7 @@ import java.time.LocalDate;
 
 @Entity
 @Table(name = "axolotls")
-public class axolotl {
+public class Axolotl {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,9 +23,9 @@ public class axolotl {
   private double age;                 // years (can be fractional)
   private LocalDate activeDate;       // when you added / last saw it, etc.
 
-  public axolotl() {}
+  public Axolotl() {}
 
-  public axolotl(Long animalId, String name, String description,
+  public Axolotl(Long animalId, String name, String description,
                  String morph, double age, LocalDate activeDate) {
     this.animalId = animalId;
     this.name = name;
@@ -35,7 +35,7 @@ public class axolotl {
     this.activeDate = activeDate;
   }
 
-  public axolotl(String name, String description,
+  public Axolotl(String name, String description,
                  String morph, double age, LocalDate activeDate) {
     this.name = name;
     this.description = description;
